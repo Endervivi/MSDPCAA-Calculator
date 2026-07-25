@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur Points Retraite MSDPCAA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page-shell">
+        <main class="container">
+            <header class="hero">
+                <img class="brand-logo" src="assets/logo.png" alt="Logo MSDPCAA">
+                <div class="hero-copy">
+                    <p class="eyebrow">MSDPCAA</p>
+                    <h1>Calculateur Points Retraite</h1>
+                </div>
+            </header>
+
+            <section class="calculator-card">
+                <div class="input-group">
+                    <label for="year">Année</label>
+                    <select id="year" class="green-input"></select>
+                </div>
+
+                <div class="input-group">
+                    <label for="salary">Salaire annuel</label>
+                    <input type="number" id="salary" class="green-input" placeholder="Ex: 68424">
+                </div>
+
+                <div class="input-group">
+                    <label for="statement_points">Points sur votre relevé</label>
+                    <input type="number" id="statement_points" class="green-input" step="0.01" placeholder="Ex: 532.88">
+                </div>
+
+                <button id="calculate-btn">Calculer</button>
+            </section>
+
+            <section class="results-card" id="results" style="display: none;">
+                <h2>Résultats pour l'année <span id="res-year"></span></h2>
+                <div class="result-row">
+                    <span>Points calculés</span>
+                    <span id="res-calculated" class="value"></span>
+                </div>
+                <div class="result-row diff-row">
+                    <span>Différentiel (Relevé - Calculés)</span>
+                    <span id="res-diff" class="value"></span>
+                </div>
+            </section>
+
+            <footer class="contact-info">
+                Pour nous (re)joindre : <a href="mailto:ASSOCIATIONMSDPCAA@GMAIL.COM">ASSOCIATIONMSDPCAA@GMAIL.COM</a>
+            </footer>
+        </main>
+    </div>
+
+    <script src="config/config.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
